@@ -1,6 +1,7 @@
 # Santa Maria
 [![tests](https://github.com/sduarte09/Santa-Maria/actions/workflows/tests.yml/badge.svg)](https://github.com/sduarte09/Santa-Maria/actions/workflows/tests.yml)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24156056.svg)](https://doi.org/10.5281/zenodo.24156056)
+
 News-based monitoring of 207 water bodies of the Magdalena River Basin (Colombia). Digital news from 42 national and regional newspapers (2016 to June 2020) is searched, downloaded and analysed with natural language processing, and the sentiment and key words of each water body are shown by year in Google Earth Engine apps. Developed for the competition *Buscando el Magdalena* 2020.
 
 > Duarte, S., Corzo Perez, G. A., Santos, G., Solomatine, D. P. (2023). *Application of Natural Language Processing to Identify Extreme Hydrometeorological Events in Digital News Media: Case of the Magdalena River Basin, Colombia.* In Corzo Perez & Solomatine (eds.), Special Publications book series. https://doi.org/10.1002/9781119639268.ch10
