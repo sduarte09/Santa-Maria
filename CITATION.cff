@@ -7,6 +7,7 @@ repository-code: "https://github.com/sduarte09/Santa-Maria"
 authors:
   - family-names: Duarte
     given-names: Santiago
+    orcid: "https://orcid.org/0000-0003-4900-5067"
 preferred-citation:
   type: book
   title: "Application of Natural Language Processing to Identify Extreme Hydrometeorological Events in Digital News Media: Case of the Magdalena River Basin, Colombia"
