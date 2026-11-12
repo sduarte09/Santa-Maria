@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the book chapter below."
+title: "Santa Maria: news-based monitoring of water bodies in the Magdalena River Basin"
+type: software
+version: 0.1.0
+repository-code: "https://github.com/sduarte09/Santa-Maria"
+authors:
+  - family-names: Duarte
+    given-names: Santiago
+preferred-citation:
+  type: book
+  title: "Application of Natural Language Processing to Identify Extreme Hydrometeorological Events in Digital News Media: Case of the Magdalena River Basin, Colombia"
+  authors:
+    - family-names: Duarte
+      given-names: Santiago
+    - family-names: Corzo Perez
+      given-names: Gerald A.
+    - family-names: Santos
+      given-names: Germán
+    - family-names: Solomatine
+      given-names: Dimitri P.
+  doi: "10.1002/9781119639268.ch10"
+  section: "Chapter 10"
+  publisher:
+    name: "Wiley"
+  year: 2023
+  month: 12
+  collection-title: "Advanced Hydroinformatics: Machine Learning and Optimization for Water Resources"
+  collection-type: book
+  editors:
+    - family-names: Corzo Perez
+      given-names: Gerald A.
+    - family-names: Solomatine
+      given-names: Dimitri P.

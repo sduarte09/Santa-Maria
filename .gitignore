@@ -1,0 +1,9 @@
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.venv/
+# never commit credentials or downloaded news
+API_KEY.csv
+*.key
+NewsDB/
+WebPage/

@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "santamaria"
+version = "0.1.0"
+description = "News-based monitoring of water bodies in the Magdalena River Basin (NLP on Colombian digital news)"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Santiago Duarte"}]
+keywords = ["natural language processing", "hydrometeorological events", "news media", "Magdalena River", "Google Earth Engine"]
+dependencies = ["numpy", "pandas"]
+
+[project.optional-dependencies]
+search = ["google-api-python-client"]
+scrape = ["requests", "beautifulsoup4", "lxml"]
+nlp = ["nltk", "gensim", "scikit-learn", "wordcloud", "pillow", "matplotlib", "openpyxl"]
+test = ["pytest", "beautifulsoup4", "scikit-learn"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
