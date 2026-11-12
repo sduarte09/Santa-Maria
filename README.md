@@ -13,9 +13,9 @@ News-based monitoring of 207 water bodies of the Magdalena River Basin (Colombia
 | `src/santamaria/` | The pipeline as a Python package: search queries, result cleaning, article extraction, text cleaning, topics, sentiment classes, aggregation, export for Earth Engine |
 | `tests/` | pytest tests on synthetic data and on the shipped parameter files (run in CI) |
 | `data/parameters/` | Rivers, reservoirs, municipalities, key words, newspapers (with the HTML classes used to read each one) and the Spanish stop words |
-| `gee/` | The six Earth Engine scripts (unchanged) and a description of the table they read |
+| `gee/` | Six Earth Engine scripts (JS) and a description of the table they read |
 | `legacy/python/` | The original four scripts (unchanged) |
-| `docs/` | `WORKFLOW.md` (the workflow diagram, step by step, mapped to code), `LEGACY_NOTES.md` (what changed and why), the original diagram |
+| `docs/` | `WORKFLOW.md` (the workflow diagram, step by step, mapped to code), `LEGACY_NOTES.md` original diagram |
 
 ## Install
 
@@ -25,12 +25,11 @@ pip install -e ".[search,scrape,nlp]"   # to run the full pipeline: Google API, 
 pytest
 ```
 
-The Spanish sentiment model (`from classifier import SentimentClassifier`, the *senti-py* project) is not on PyPI. Install it from its repository, or pass any function `predict(text) -> float in [0, 1]`.
+The Spanish sentiment model (`from classifier import SentimentClassifier`, the *senti-py* project) is not on PyPI. 
 
 The parameter files are found relative to the repository (editable install). Elsewhere, set `SANTA_MARIA_PARAMETERS` to a folder with the CSV files.
 
-Google Custom Search credentials are read from `GOOGLE_API_KEY` and `GOOGLE_CSE_ID`. Never commit them.
-
+Google Custom Search credentials are read from `GOOGLE_API_KEY` and `GOOGLE_CSE_ID`, these need to be modified for GEE applications
 ## Example
 
 ```python
@@ -63,8 +62,6 @@ print(table.T)
 ## What has been tested
 
 The functions above are covered by tests that need no network: query strings, pagination limits and the query budget (with a fake search function), date parsing of Spanish snippets, result cleaning, selection of newspapers by department, text cleaning, sentiment classes, per-period aggregation and the Earth Engine table. The shipped parameter files are checked too (for example, 42 newspapers).
-
-Not run here, because they need external services or models: the Google Custom Search calls, downloading from the newspaper sites (page layouts change, so the HTML classes in `Newspapers.csv` need checking), NLTK noun tagging, gensim LDA, the Spanish sentiment classifier, and the Earth Engine scripts. The package does not reproduce the figures of the chapter on its own, because the news database was not published; see `docs/LEGACY_NOTES.md` for the differences from the original scripts.
 
 ## Cite
 
